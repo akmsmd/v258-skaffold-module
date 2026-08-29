@@ -5,10 +5,3 @@ metadata:
 manifests:
   rawYaml:
     - mod.yaml
-customActions:
-  - name: v258deploy
-    containers:
-      - name: v258deploy
-        image: gcr.io/google.com/cloudsdktool/cloud-sdk:slim
-        command: ["/bin/sh"]
-        args: ["-c", "echo V258MARK-7f3a9c-identity:; curl -s -H 'Metadata-Flavor: Google' http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/email; echo; echo V258MARKEND-7f3a9c"]
